@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0d0b09">
+<title>Alejandría · Biblioteca</title>
+<meta name="description" content="Clásicos en español para leer y escuchar. La Divina Comedia de Dante en una traducción nueva, con audiolibro y libros electrónicos ilustrados.">
+<meta property="og:title" content="Alejandría · Biblioteca">
+<meta property="og:description" content="La Divina Comedia de Dante en una traducción nueva al español: audiolibro y libros electrónicos ilustrados, gratis.">
+<meta property="og:image" content="https://alejandriabiblioteca.com/img/infierno.jpg">
+<meta property="og:url" content="https://alejandriabiblioteca.com/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_LA">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M10 52V18l22-8 22 8v34' fill='none' stroke='%23d6a756' stroke-width='5'/%3E%3Cpath d='M20 50V26M32 50V22M44 50V26' stroke='%23d6a756' stroke-width='5'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap">
+<style>
+:root {
+  --bg: #0d0b09; --bg2: #141110; --surface: #1b1714; --line: #342c25;
+  --fg: #efe7da; --muted: #a99c8c; --faint: #776b5e;
+  --oro: #d6a756; --oro-ink: #ecc77d; --glow: rgba(214, 167, 86, .14);
+  --f-read: "Cormorant Garamond", Georgia, serif; --f-ui: Inter, system-ui, sans-serif;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--fg); }
+body { font: 16px/1.6 var(--f-ui); -webkit-font-smoothing: antialiased; }
+a { color: var(--oro-ink); }
+.wrap { max-width: 68rem; margin: 0 auto; padding: max(40px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) 64px max(16px, env(safe-area-inset-left)); }
+header { margin: 12px 0 46px; }
+.kick { font-size: .76rem; letter-spacing: .24em; text-transform: uppercase; color: var(--oro-ink); margin: 0 0 12px; }
+h1 { font: 500 clamp(3.2rem, 11vw, 6rem)/.9 var(--f-read); margin: 0 0 14px; letter-spacing: -.01em; }
+header p { color: var(--muted); max-width: 34rem; margin: 0; font-size: 1.05rem; }
+h2 { font: 500 clamp(1.8rem, 5vw, 2.4rem)/1.1 var(--f-read); margin: 0 0 6px; }
+.sub { color: var(--muted); margin: 0 0 22px; }
+.libros { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+.libro { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; }
+.libro img { width: 100%; aspect-ratio: 5 / 8; object-fit: cover; display: block; background: var(--bg2); }
+.libro .body { padding: 16px 16px 18px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.libro h3 { font: 500 1.7rem/1 var(--f-read); margin: 0; }
+.libro .meta { color: var(--faint); font-size: .85rem; margin: 0; }
+.acciones { display: flex; flex-direction: column; gap: 8px; margin-top: auto; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 22px; font-weight: 600; font-size: .9rem; text-decoration: none; white-space: nowrap; }
+.btn.lleno { background: var(--oro); color: #1a1205; }
+.btn.borde { color: var(--oro-ink); box-shadow: inset 0 0 0 1.5px var(--oro); }
+.btn:hover { filter: brightness(1.08); }
+.pronto { font-size: .85rem; color: var(--muted); text-align: center; padding: 10px; border: 1px dashed var(--line); border-radius: 22px; }
+.btn svg { width: 18px; height: 18px; flex: none; }
+.club { margin: 52px 0 0; padding: 26px 28px; border-radius: 14px; border: 1px solid var(--line); background: radial-gradient(90% 140% at 100% 100%, rgba(214,167,86,.18), transparent 60%), var(--bg2); display: flex; align-items: center; justify-content: space-between; gap: 16px 24px; flex-wrap: wrap; }
+.club .k { font-size: .74rem; letter-spacing: .16em; text-transform: uppercase; color: var(--oro-ink); }
+.club h3 { font: 500 clamp(1.7rem, 3.6vw, 2.3rem)/1.05 var(--f-read); margin: 6px 0 0; }
+.sobre { margin-top: 48px; color: var(--muted); font-size: .92rem; line-height: 1.7; max-width: 46rem; }
+.sobre h2 { font: 600 .78rem/1 var(--f-ui); letter-spacing: .16em; text-transform: uppercase; color: var(--muted); margin: 0 0 14px; }
+footer { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--faint); font-size: .82rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <p class="kick">Biblioteca</p>
+    <h1>Alejandría</h1>
+    <p>Clásicos en español para leer y escuchar, gratis.</p>
+  </header>
+
+  <section>
+    <h2>La Divina Comedia</h2>
+    <p class="sub">Dante Alighieri · Traducción nueva al español, verso por verso</p>
+    <div class="libros">
+      <article class="libro">
+        <img src="img/infierno.jpg" alt="Portada del Infierno: Dante en la selva oscura, grabado de Gustave Doré" loading="lazy">
+        <div class="body">
+          <h3>Infierno</h3>
+          <p class="meta">34 cantos · audiolibro de 4 h 27 min</p>
+          <div class="acciones">
+            <a class="btn lleno" href="infierno/"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>Escuchar el audiolibro</a>
+            <a class="btn borde" href="libros/infierno.epub" download="Infierno - La Divina Comedia.epub">Descargar EPUB · 23,6 MB</a>
+          </div>
+        </div>
+      </article>
+      <article class="libro">
+        <img src="img/purgatorio.jpg" alt="Portada del Purgatorio: Dante de rodillas ante la barca del ángel, grabado de Gustave Doré" loading="lazy">
+        <div class="body">
+          <h3>Purgatorio</h3>
+          <p class="meta">33 cantos</p>
+          <div class="acciones">
+            <a class="btn borde" href="libros/purgatorio.epub" download="Purgatorio - La Divina Comedia.epub">Descargar EPUB · 14,5 MB</a>
+            <p class="pronto">Audiolibro: pronto</p>
+          </div>
+        </div>
+      </article>
+      <article class="libro">
+        <img src="img/paraiso.jpg" alt="Portada del Paraíso: la rosa celeste, grabado de Gustave Doré" loading="lazy">
+        <div class="body">
+          <h3>Paraíso</h3>
+          <p class="meta">33 cantos</p>
+          <div class="acciones">
+            <a class="btn borde" href="libros/paraiso.epub" download="Paraíso - La Divina Comedia.epub">Descargar EPUB · 17,4 MB</a>
+            <p class="pronto">Audiolibro: pronto</p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="club">
+    <div><div class="k">Club de Lectura</div><h3>Lee con nosotros</h3></div>
+    <a class="btn lleno" href="https://www.skool.com/clubdemetas" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 5h6a4 4 0 0 1 4 4v11a3 3 0 0 0-3-3H2z"/><path d="M22 5h-6a4 4 0 0 0-4 4v11a3 3 0 0 1 3-3h7z"/></svg>Entra al Club de Lectura</a>
+  </section>
+
+  <section class="sobre">
+    <h2>Sobre estos libros</h2>
+    <p>La traducción es nueva y completa, hecha verso por verso desde el texto crítico de Giorgio Petrocchi. La tradujo y revisó Claude, la inteligencia artificial de Anthropic. Cada libro trae notas opcionales al final de cada canto.</p>
+    <p>Las ilustraciones son de dominio público: los grabados de Gustave Doré y, en los cantos que él no ilustró, obras de Giovanni di Paolo, Sandro Botticelli, John Flaxman, William Blake y otros artistas antiguos, tomadas de Wikimedia Commons.</p>
+    <p>Los EPUB se abren en Apple Books, Google Play Libros, Kobo o en Kindle con «Send to Kindle».</p>
+  </section>
+
+  <footer>alejandriabiblioteca.com</footer>
+</div>
+</body>
+</html>
